@@ -380,34 +380,47 @@ Fill correct details to get fast load 🚚
 <script>
 function sendLoad(){
 
-let driver = document.getElementById("driver").value.trim();
 let truck = document.getElementById("truck").value.trim();
-let size = document.getElementById("size").value;
-let body = document.getElementById("body").value;
-let ton = document.getElementById("ton").value;
+let mobile = document.getElementById("mobile").value.trim();
 let from = document.getElementById("from").value;
 let to = document.getElementById("to").value;
-let mobile = document.getElementById("mobile").value.trim();
+
+let driver = document.getElementById("driver").value;
+let capacity = document.getElementById("capacity").value;
+let body = document.getElementById("body").value;
+let size = document.getElementById("size").value;
 
 if(truck=="" || mobile==""){
 alert("Enter all details");
 return;
 }
 
-let msg = "🚚 JMD LOAD REQUEST\n\n";
-msg += "👤 Driver: " + driver + "\n";
-msg += "🚛 Truck: " + truck + "\n";
-msg += "📏 Size: " + size + "\n";
-msg += "📦 Body: " + body + "\n";
-msg += "⚖️ Capacity: " + ton + "\n";
-msg += "📍 From: " + from + "\n";
-msg += "📍 To: " + to + "\n";
-msg += "📱 Phone: " + mobile;
+let msg = "JMD TRANSPORT LOAD REQUEST\n\n";
+
+msg += "Pandey Ji,\n\n";
+msg += "Namaste.\n\n";
+
+msg += "Ek truck available hai loading ke liye.\n";
+msg += "Kindly load ho to bata dijiyega.\n\n";
+
+msg += "Truck Number: " + truck + "\n";
+msg += "Driver Name: " + driver + "\n";
+msg += "Capacity: " + capacity + "\n";
+msg += "Body Type: " + body + "\n";
+msg += "Size: " + size + "\n\n";
+
+msg += "From: " + from + "\n";
+msg += "To: " + to + "\n\n";
+
+msg += "Driver Contact: " + mobile + "\n\n";
+
+msg += "Dhanyawaad 🙏\n";
+msg += "- JMD Transport";
 
 window.location.href = "https://wa.me/918660638720?text=" + encodeURIComponent(msg);
+
 }
 </script>
-
 <!-- FOOTER -->
 <div style="text-align:center; padding:20px; background:#000; color:#fff; margin-top:20px;">
 <p>🚀 Developed by Rebel</p>
